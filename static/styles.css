@@ -1,0 +1,36 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+h2, h3 {
+  font-weight: 600;
+}
+
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
+
+/* Button style */
+.btn-primary {
+    background-color: #3d5afe;
+    border-color: #3d5afe;
+}
+.btn-primary:hover {
+    background-color: #304ffe;
+    border-color: #304ffe;
+}
+
+/* Slight glow on input focus */
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(61, 90, 254, 0.25);
+    border-color: #3d5afe;
+}
+
+/* Optional: remove default box shadow from navbar */
+.navbar {
+    box-shadow: none !important;
+}
