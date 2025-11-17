@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block main %}
+<div class="col-md-8 mx-auto">
+  <form action="/analyze" method="post">
+    <div class="mb-3">
+      <textarea class="form-control" name="text" placeholder="Enter your text here" rows="5" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="feature" class="form-label">Select Analysis Type</label>
+      <select class="form-select" name="feature" required>
+        <option value="dep">Dependency Parse</option>
+        <option value="tokens">Tokens</option>
+        <option value="lemmas">Lemmas</option>
+        <option value="nostop">Remove Stopwords</option>
+      </select>
+    </div>
+    <button class="btn btn-primary w-100" type="submit">Analyze</button>
+  </form>
+</div>
+{% endblock %}

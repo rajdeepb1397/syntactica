@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block main %}
+
+<!-- This is the key: col-lg-4 and col-md-6 are narrower than before -->
+<div class="col-lg-4 col-md-6 mx-auto">
+
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="password" placeholder="Password" type="password" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="confirmation" placeholder="Confirm Password" type="password" required>
+        </div>
+        <button class="btn btn-primary w-100" type="submit">Register</button>
+    </form>
+</div>
+
+{% endblock %}

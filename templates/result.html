@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block main %}
+<div class="col-md-10 mx-auto text-center">
+  <h4 class="mb-3" style="font-weight: normal;">{{ result_type }}</h4>
+
+  {% if html %}
+    <div class="border rounded p-3 bg-white mb-3">{{ html | safe }}</div>
+    <form action="/download_dep" method="post">
+      <input type="hidden" name="text" value="{{ request.form.text }}">
+      <button class="btn btn-outline-success" type="submit">Download Visualization</button>
+    </form>
+  {% elif items %}
+    <ul class="list-group mb-3">
+      {% for item in items %}
+        <li class="list-group-item">{{ item }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <a href="/" class="btn btn-secondary mt-3">Back</a>
+</div>
+{% endblock %}

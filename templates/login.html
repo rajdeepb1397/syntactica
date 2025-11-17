@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block main %}
+
+<!-- Use the exact same container classes for a consistent width -->
+<div class="col-lg-4 col-md-6 mx-auto">
+
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="password" placeholder="Password" type="password" required>
+        </div>
+        <button class="btn btn-primary w-100" type="submit">Log In</button>
+    </form>
+</div>
+
+{% endblock %}
